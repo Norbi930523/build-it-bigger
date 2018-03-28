@@ -17,22 +17,22 @@ import javax.inject.Named;
                 packagePath = ""
         )
 )
-public class MyEndpoint {
+public class JokesEndpoint {
 
     private static final JokeGenerator JOKE_GENERATOR = new JokeGenerator();
 
     /** A simple endpoint method that takes a name and says Hi back */
     @ApiMethod(name = "sayHi")
-    public MyBean sayHi(@Named("name") String name) {
-        MyBean response = new MyBean();
+    public SimpleResponse sayHi(@Named("name") String name) {
+        SimpleResponse response = new SimpleResponse();
         response.setData("Hi, " + name);
 
         return response;
     }
 
     @ApiMethod(name = "joke", httpMethod = "GET")
-    public MyBean joke() {
-        MyBean response = new MyBean();
+    public SimpleResponse joke() {
+        SimpleResponse response = new SimpleResponse();
         response.setData(JOKE_GENERATOR.getJoke());
         return response;
     }
