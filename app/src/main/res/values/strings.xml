@@ -2,4 +2,6 @@
     <string name="app_name">Build it Bigger</string>
     <string name="instructions">Press the button for a delicious joke!</string>
     <string name="button_text">Tell Joke</string>
+    <string name="message_offline">You are offline</string>
+    <string name="message_no_data">Could not get data from Google Cloud Endpoint</string>
 </resources>

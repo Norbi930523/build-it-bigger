@@ -58,7 +58,7 @@ public class JokeLoader extends AsyncTaskLoader<String> {
             return jokesApiService.joke().execute().getData();
         } catch (IOException e) {
             Log.e(TAG, "Failed to get joke from Jokes API", e);
-            return "";
+            return null;
         }
     }
 }
